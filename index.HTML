@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hamiz Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Hamiz Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="index.HTML" class="active">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="intro-section">
+    <div class="intro-text">
+      <h2 class="typing">
+        Hi, I'm <span class="name-highlight">Hamiz</span> — Web Development Student
+      </h2>
+      <p>Passionate about building clean, modern websites with great user experience. Here’s a snapshot of my work and skills.</p>
+      <a href="#work" class="btn-primary">View My Work</a>
+    </div>
+    <div class="intro-image-box">
+      <img src="projects/profile.jpg" alt="Hamiz Profile Picture" class="profile-pic" />
+    </div>
+  </section>
+
+  <section id="work" class="work-section">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Apps</button>
+      <button class="filter-btn" data-filter="design">Designs</button>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" data-category="web">
+        <img src="projects/ecommerce.jpg" alt="E-commerce Website" />
+        <div class="project-info">
+          <h3>E-commerce Website</h3>
+          <p>A fully responsive e-commerce site with product filters, shopping cart, and payment integration.</p>
+          <small>Technologies: HTML, CSS, JavaScript, Stripe API</small>
+        </div>
+      </div>
+      <div class="project-card" data-category="web">
+        <img src="projects/portfolio.jpg" alt="Portfolio Website" />
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>Personal portfolio showcasing projects, blog posts, and a contact form.</p>
+          <small>Technologies: HTML, CSS, JavaScript</small>
+        </div>
+      </div>
+      <div class="project-card" data-category="design">
+        <img src="projects/uiux.jpg" alt="UI/UX Design" />
+        <div class="project-info">
+          <h3>UI/UX Design</h3>
+          <p>Modern user interface design concepts for mobile apps and websites.</p>
+          <small>Tools: Figma, Adobe XD</small>
+        </div>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">Get In Touch</h2>
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+      <div class="form-status" id="formStatus"></div>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Hamiz Portfolio. All rights reserved.
+  </footer>
+
+  <script>
+    // Simple filter functionality for projects
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        projects.forEach(project => {
+          if (filter === 'all' || project.dataset.category === filter) {
+            project.style.display = 'flex';
+          } else {
+            project.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Contact form submission simulation
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formStatus.textContent = "Sending...";
+      setTimeout(() => {
+        formStatus.textContent = "Message sent successfully!";
+        contactForm.reset();
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

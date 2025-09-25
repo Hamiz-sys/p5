@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hamiz Portfolio - Work</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Hamiz<span class="highlight">.</span></h1>
+      <ul class="nav-links">
+        <li><a href="index.HTML">Home</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content work-page">
+    <h2>My Projects</h2>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="node">Node.js</button>
+      <button class="filter-btn" data-filter="mongodb">MongoDB</button>
+      <button class="filter-btn" data-filter="css">CSS</button>
+      <button class="filter-btn" data-filter="socketio">Socket.io</button>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card" data-tech="react node mongodb">
+        <img src="projects/ecommerce.jpg" alt="E-commerce App" />
+        <div class="project-info">
+          <h3>E-commerce Platform</h3>
+          <p>Full-stack scalable e-commerce app with payment integration and real-time order tracking.</p>
+          <small>Tech: React, Node.js, MongoDB</small>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card" data-tech="react socketio">
+        <img src="projects/chatapp.jpg" alt="Chat Application" />
+        <div class="project-info">
+          <h3>Real-time Chat App</h3>
+          <p>Multi-room chat application featuring live notifications and message encryption.</p>
+          <small>Tech: React, Socket.io</small>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card" data-tech="react node mongodb">
+        <img src="projects/blogplatform.jpg" alt="Blog Platform" />
+        <div class="project-info">
+          <h3>Blog Platform</h3>
+          <p>Multi-user blogging platform with rich-text editing and user authentication.</p>
+          <small>Tech: React, Node.js, MongoDB</small>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card" data-tech="react css">
+        <img src="projects/portfolio.jpg" alt="Portfolio Website" />
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>Personal portfolio featuring animations, responsive design, and dark mode support.</p>
+          <small>Tech: React, CSS, Animations</small>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Hamiz. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

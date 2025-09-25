@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hamiz Portfolio - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Hamiz<span class="highlight">.</span></h1>
+      <ul class="nav-links">
+        <li><a href="index.HTML">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content contact-page">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm" class="contact-form" autocomplete="off">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+      <p id="formStatus" class="form-status"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Hamiz. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
